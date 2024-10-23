@@ -88,8 +88,6 @@ for _, row in df.iterrows():
 
 # Set labels and title
 ax.set_title('Weekly Schedule', fontsize=16)
-ax.set_xlabel('Day of the Week')
-ax.set_ylabel('Time of Day')
 
 # Ensure that the layout is tight and the spacing is proper
 plt.tight_layout()
