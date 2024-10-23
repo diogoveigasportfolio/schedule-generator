@@ -1,0 +1,69 @@
+- Day: Monday
+  Start: "08:30"
+  End: "10:30"
+  ClassName: ACM
+  ClassNumber: (TP2)
+  Room: E363
+
+- Day: Monday
+  Start: "10:30"
+  End: "13:30"
+  ClassName: ACM
+  ClassNumber: (PL7)
+  Room: F368
+
+- Day: Monday
+  Start: "15:00"
+  End: "16:30"
+  ClassName: PA
+  ClassNumber: (TP3)
+  Room: F258
+
+- Day: Tuesday
+  Start: "13:30"
+  End: "15:30"
+  ClassName: CDBDD
+  ClassNumber: (T1)
+  Room: F253
+
+- Day: Wednesday
+  Start: "11:00"
+  End: "13:00"
+  ClassName: PA
+  ClassNumber: (PL5)
+  Room: F152
+
+- Day: Wednesday
+  Start: "16:30"
+  End: "18:30"
+  ClassName: CDBDD
+  ClassNumber: (PL2)
+  Room: E212
+
+- Day: Thursday
+  Start: "14:30"
+  End: "16:30"
+  ClassName: RC
+  ClassNumber: (PL5)
+  Room: F369A
+
+- Day: Friday
+  Start: "08:30"
+  End: "10:30"
+  ClassName: ECO
+  ClassNumber: (TP2)
+  Room: E304
+
+- Day: Friday
+  Start: "13:30"
+  End: "15:00"
+  ClassName: PA
+  ClassNumber: (TP3)
+  Room: F253
+
+- Day: Friday
+  Start: "16:30"
+  End: "18:30"
+  ClassName: RC
+  ClassNumber: (TP2)
+  Room: F253
