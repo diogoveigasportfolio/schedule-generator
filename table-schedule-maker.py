@@ -9,6 +9,19 @@ with open('schedule.yaml', 'r') as file:
 # Create a DataFrame from the data
 df = pd.DataFrame(data, columns=['Day', 'Start', 'End', 'ClassName', 'ClassNumber', 'Room'])
 
+# Create a list of unique classes 
+unique_classes = list(set(df['ClassName'])) 
+
+# Read the all the colors from the YAML file
+with open('colors.yaml', 'r') as file:
+    colors_data = yaml.safe_load(file)
+
+# Ensure colors_data is a list of colors
+colors_list = colors_data if isinstance(colors_data, list) else list(colors_data.values())
+
+# Create a map with the class and colors, cycling through the colors using modulo
+class_colors = {class_name: colors_list[i % len(colors_list)] for i, class_name in enumerate(unique_classes)}
+
 # Create figure and axis
 fig, ax = plt.subplots(figsize=(10, 8))
 
@@ -34,6 +47,8 @@ ax.invert_yaxis()
 
 # Add gridlines to represent time slots and days
 ax.grid(True, which='both', linestyle='--', color='gray', linewidth=0.5)
+
+ax.grid(axis='x', visible=False)
 
 # Function to convert time (e.g., '08:30') to fractional hours (e.g., 8.5)
 def time_to_float(time_str):
@@ -62,10 +77,10 @@ for _, row in df.iterrows():
     height = end_time_index - start_time_index  # Calculate the height based on duration
 
     # Create a rectangle for the class with some margin to avoid overlap with grid lines
-    ax.add_patch(plt.Rectangle((day_index - 0.4, start_time_index), 0.8, height, facecolor='lightblue', edgecolor='black', linewidth=1.5))
+    ax.add_patch(plt.Rectangle((day_index - 0.4, start_time_index), 0.8, height, facecolor=class_colors[class_name], edgecolor='black', linewidth=1.5))
 
     # Add the top start and end times of the class
-    ax.text(day_index, start_time_index + 0.2, f"{start_date} - {end_date}", va='top', ha='center', fontsize=8, color='black')
+    ax.text(day_index, start_time_index + 0.2, f"{start_date} - {end_date}", va='top', ha='center', fontsize=8, color='black', fontweight='bold')
 
     # Add text inside the rectangle
     ax.text(day_index, (start_time_index + end_time_index) / 2, f"{class_name} {class_number}\n{room}", 
