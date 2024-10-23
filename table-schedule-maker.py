@@ -77,7 +77,7 @@ for _, row in df.iterrows():
     height = end_time_index - start_time_index  # Calculate the height based on duration
 
     # Create a rectangle for the class with some margin to avoid overlap with grid lines
-    ax.add_patch(plt.Rectangle((day_index - 0.4, start_time_index), 0.8, height, facecolor=class_colors[class_name], edgecolor='black', linewidth=1.5))
+    ax.add_patch(plt.Rectangle((day_index - 0.4, start_time_index), 0.8, height, facecolor=class_colors[class_name], edgecolor='#333', linewidth=1.5))
 
     # Add the top start and end times of the class
     ax.text(day_index, start_time_index + 0.2, f"{start_date} - {end_date}", va='top', ha='center', fontsize=8, color='black', fontweight='bold')
@@ -90,7 +90,7 @@ for _, row in df.iterrows():
 ax.set_title('Weekly Schedule', fontsize=16)
 
 # Ensure that the layout is tight and the spacing is proper
-plt.tight_layout()
+plt.tight_layout(pad=2)
 
 # Save the schedule as an image
 plt.savefig('schedule.png')

@@ -20,6 +20,13 @@
   Room: F258
 
 - Day: Tuesday
+  Start: "10:30"
+  End: "12:30"
+  ClassName: CDBDD
+  ClassNumber: (PL6)
+  Room: F152
+
+- Day: Tuesday
   Start: "13:30"
   End: "15:30"
   ClassName: CDBDD
@@ -32,13 +39,6 @@
   ClassName: PA
   ClassNumber: (PL5)
   Room: F152
-
-- Day: Wednesday
-  Start: "16:30"
-  End: "18:30"
-  ClassName: CDBDD
-  ClassNumber: (PL2)
-  Room: E212
 
 - Day: Thursday
   Start: "14:30"
