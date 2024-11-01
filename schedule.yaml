@@ -33,13 +33,6 @@
   ClassNumber: (T1)
   Room: F253
 
-- Day: Wednesday
-  Start: "11:00"
-  End: "13:00"
-  ClassName: PA
-  ClassNumber: (PL5)
-  Room: F152
-
 - Day: Thursday
   Start: "14:30"
   End: "16:30"
@@ -53,6 +46,13 @@
   ClassName: ECO
   ClassNumber: (TP2)
   Room: E304
+
+- Day: Friday
+  Start: "10:30"
+  End: "12:30"
+  ClassName: PA
+  ClassNumber: (PL9)
+  Room: F267
 
 - Day: Friday
   Start: "13:30"
